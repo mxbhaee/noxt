@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">noxt</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="login_welcome">Welcome..</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="add">Add</string>
+    <string name="search_your_notes">Search</string>
+    <string name="options">Options</string>
+    <string name="save">Save</string>
+    <string name="category">Category</string>
+    <string name="title">Title</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="app_changelog">### v1.1.3:\n
+         - Fixed contact us email\n
+- Added Notes Widgets\n
+- Added Note QS tile\n
+- Auto save option for Notes\n
+- new color picker for Notes\n
+- Add adaptive notes text colors option\n
+- Improve Notes auto save\'s changes detection\n
+- Improve Notes add bottom sheet layout\n
+- Add Favorite to Notes\n
+- Update Notes sharing\n
+- Add more translations\n
+- Bugs fixes and Layout improvements\n
+        ### v1.1.2:\n
+        - Fixed styles bar not showing for emulators\n
+- Updated notes styles (fixed styles in lists and added tasks lists)\n
+- Add encryption to local database\n
+- Layout improvements\n
+        ### v1.1.1:\n
+        - Fixed stylesbar crash\n
+        - Replaced in app rate with playstore link\n
+        - Fixed categories deleting\n
+        - Layout improvements\n
+        ### v1.1.0:\n
+        - Added Notes sync with Firestore\n
+        - Added Note save confirmation\n
+        - Fixed keyboard showing above task add sheet\n
+        ### v1.0.2:\n
+- Added About screen\n
+- Fixed category deletion in Note add screen\n
+- Fixed force dark mode issues\n
+### v1.0.1:\n
+- Improved Reminders alarms\n
+- Added Categories deletion option (Long press on category to delete)\n
+- Improved Notes styling (Styling selected text)\n
+- UI improvements\n
+### v1.0.0:\n
+- First Release</string>
+    <string name="note">Note</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="description">Description</string>
+    <string name="mark_as_done">Mark as done</string>
+    <string name="start_writing_notes">Start writing Notes !</string>
+    <string name="set_new_reminders">Set new Reminders !</string>
+    <string name="add_some_tasks">Add some Tasks !</string>
+    <string name="notes">Notes</string>
+    <string name="tasks">Tasks</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign out</string>
+    <string name="search">Search</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="no_notes_available">No notes available</string>
+    <string name="long_press_on_category_to_delete">Long press on category to delete</string>
+    <string name="task_title">Task Title</string>
+    <string name="details">Details</string>
+    <string name="edited">Edited</string>
+    <string name="favorite">Favorite</string>
+    <string name="share_as">Share as</string>
+    <string name="share_as_text">Text</string>
+    <string name="share_as_image">Image</string>
+    <string name="share_as_markdown">Markdown</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="changelog">Changelog</string>
+    <string name="license">License</string>
+    <string name="author">Author</string>
+    <string name="rate_app">Rate this app</string>
+    <string name="support_project">Support this project</string>
+    <string name="contact_us">Contact us</string>
+    <string name="categories">Categories</string>
+    <string name="all_categories">All categories</string>
+    <string name="add_category">Add category</string>
+    <string name="settings">Settings</string>
+    <string name="noets_synced">Your notes are now synced !</string>
+    <string name="auth_failed">Authentication Failed.</string>
+    <string name="add_title_warning">Please add a title to your note</string>
+    <string name="copy">Copy</string>
+    <string name="delete_category">Delete category</string>
+    <string name="delete_confirm">\"Do you want to delete \"</string>
+    <string name="discard_changes">Discard changes</string>
+    <string name="discard">Discard</string>
+    <string name="exit_without_save_confirm">Do you want to exit without saving ?</string>
+    <string name="items_selected">\" Items selected\"</string>
+    <string name="please_restart">Please restart the app to take effect</string>
+    <string name="reminder_date">Reminder Date</string>
+    <string name="choose_an_app">Choose an app</string>
+    <string name="copied_note">Copied this note to clipboard.</string>
+    <string name="app_theme">App Theme</string>
+    <string name="notes_style">Notes Style</string>
+    <string name="hour_format">24-Hour Time</string>
+    <string name="appearance">Appearance</string>
+    <string name="enable_auto_save">Enable Auto Save</string>
+    <string name="enable_auto_save_desc">If disabled will show confirm save dialog instead</string>
+    <string name="adaptive_notes">Adaptive Notes Text Colors</string>
+    <string name="adaptive_notes_desc">Enabling this will change Notes text colors to adapt with background color</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_desc">Sometimes, Reminder notification might not trigger due to the aggressive battery optimization by your phone manufacturer.</string>
+</resources>

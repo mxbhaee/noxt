@@ -1,0 +1,66 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/appearance">
+
+        <ListPreference
+            app:defaultValue="system"
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:iconSpaceReserved="false"
+            app:key="theme"
+            app:title="@string/app_theme"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="grid"
+            app:entries="@array/notes_grid_entries"
+            app:entryValues="@array/notes_grid_values"
+            app:iconSpaceReserved="false"
+            app:key="notes_grid"
+            app:title="@string/notes_style"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreference
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="hour_format"
+            app:title="@string/hour_format" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="Notes">
+        <SwitchPreference
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="notes_auto_save"
+            app:summary="@string/enable_auto_save_desc"
+            app:title="@string/enable_auto_save" />
+        <SwitchPreference
+            android:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="notes_adaptive_text"
+            app:summary="@string/adaptive_notes_desc"
+            app:title="@string/adaptive_notes" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/notifications">
+        <Preference
+            app:icon="@drawable/ic_info_black"
+            app:iconSpaceReserved="false"
+            app:persistent="false"
+            app:selectable="false"
+            app:summary="@string/notifications_desc" />
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="batt_opt"
+            app:title="Learn more" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

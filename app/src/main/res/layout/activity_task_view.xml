@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/activity_task_view_container"
+    tools:context=".view.activity.TaskViewActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/task_view_appbar"
+        android:background="@android:color/transparent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            android:id="@+id/activity_task_view_toolbar"
+            style="@style/Theme.App.ActionBar"
+            app:menu="@menu/note_add_menu"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/task_view_appbar">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/task_view_reminder_chip"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_reminder"
+                android:textColor="@color/text_primary"
+                app:chipIcon="@drawable/ic_access_alarms"
+                app:chipIconTint="@color/text_secondary"
+                app:chipStrokeColor="@color/text_secondary"
+                app:chipStrokeWidth="1dp"
+                app:closeIconEnabled="false" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/task_view_category_chip"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textColor="@color/text_primary"
+                app:chipIcon="@drawable/ic_add"
+                app:chipIconTint="@color/text_secondary"
+                app:chipStrokeColor="@color/text_secondary"
+                app:chipStrokeWidth="1dp"
+                app:closeIconEnabled="false" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxBackgroundColor="@color/background"
+            app:boxStrokeColor="@color/primary_light">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:id="@+id/task_title_edittext"
+                android:inputType="textCapSentences"
+                android:lines="1"
+                android:hint="@string/title"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxBackgroundColor="@color/background"
+            app:boxStrokeColor="@color/primary_light">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="48dp"
+                android:paddingBottom="48dp"
+                android:id="@+id/task_desc_edittext"
+                android:inputType="textMultiLine"
+                android:minHeight="68dp"
+                android:hint="@string/description"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:fontFamily="@font/roboto_bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/accent"
+        android:text="@string/mark_as_done"
+        android:id="@+id/task_extended_fab"
+        android:textColor="@color/text_primary"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/background"
+    android:id="@+id/activity_note_add_container"
+    tools:context=".view.activity.NoteAddActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/add_note_appbar"
+        android:background="@android:color/transparent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            android:id="@+id/activity_note_add_toolbar"
+            style="@style/Theme.App.ActionBar"
+            app:menu="@menu/note_add_menu"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        app:layout_constraintTop_toBottomOf="@id/add_note_appbar"
+        android:paddingStart="12dp"
+        android:paddingEnd="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/note_add_category_chip"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textColor="@color/text_primary"
+            app:chipIcon="@drawable/ic_add"
+            app:chipIconTint="@color/text_secondary"
+            app:chipStrokeColor="@color/text_secondary"
+            app:chipStrokeWidth="1dp"
+            app:closeIconEnabled="false" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="34dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/note_title_editText"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_bold"
+                android:hint="@string/title"
+                android:inputType="textCapSentences"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textStyle="bold"/>
+
+            <com.yahiaangelo.markdownedittext.MarkdownEditText
+                android:id="@+id/note_body_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="18dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_medium"
+                android:lineSpacingExtra="4dp"
+                android:gravity="top"
+                android:hint="@string/note"
+                android:padding="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/note_title_editText" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:id="@+id/note_date"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Edited Today 20:25" />
+
+
+    <com.yahiaangelo.markdownedittext.MarkdownStylesBar
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:buttonColor="@color/style_button_color"
+        android:clipToPadding="false"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        tools:visibility="visible"
+        android:id="@+id/note_styles_bar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/note_date" />
+</androidx.constraintlayout.widget.ConstraintLayout>
